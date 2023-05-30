@@ -1,0 +1,16 @@
+{
+  "thoughts": [
+    {
+      "id": 3,
+      "content": "Que bom que vc veio 2",
+      "author": "Carol",
+      "model": "modelo2"
+    },
+    {
+      "id": 4,
+      "content": "Testando função de editar",
+      "author": "Dev",
+      "model": "modelo3"
+    }
+  ]
+}
