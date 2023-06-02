@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Thought } from './IThought';
 import { Observable } from 'rxjs';
 
@@ -11,8 +11,26 @@ export class ThoughtService {
 
   constructor(private http: HttpClient) {}
 
-  getThoughts(): Observable<Thought[]> {
-    return this.http.get<Thought[]>(this.API);
+  getThoughts(
+    page: number,
+    filter: string,
+    favorites: boolean
+  ): Observable<Thought[]> {
+    const itensPerPage = 6;
+
+    let params = new HttpParams()
+      .set('_page', page)
+      .set('_limit', itensPerPage);
+
+    if (filter.trim().length > 2) {
+      params = params.set('q', filter);
+    }
+
+    if (favorites) {
+      params = params.set('favorite', true);
+    }
+
+    return this.http.get<Thought[]>(this.API, { params });
   }
 
   createThought(thought: Thought): Observable<Thought> {
@@ -32,5 +50,10 @@ export class ThoughtService {
   editThought(thought: Thought): Observable<Thought> {
     const url = `${this.API}/${thought.id}`;
     return this.http.put<Thought>(url, thought);
+  }
+
+  changeFavorite(thought: Thought): Observable<Thought> {
+    thought.favorite = !thought.favorite;
+    return this.editThought(thought);
   }
 }

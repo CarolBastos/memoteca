@@ -1,16 +1,165 @@
 {
   "thoughts": [
     {
-      "id": 3,
-      "content": "Que bom que vc veio 2",
-      "author": "Carol",
-      "model": "modelo2"
+      "id": 1,
+      "content": "Testando função de editar",
+      "author": "Dev",
+      "model": "modelo3",
+      "favorite": true
+    },
+    {
+      "id": 2,
+      "content": "Na volta a gente compra!",
+      "author": "Mãe",
+      "model": "modelo2",
+      "favorite": true
     },
     {
       "id": 4,
-      "content": "Testando função de editar",
+      "content": "Vc faz TI? Conserta meu celular!",
+      "author": "Grupo da família",
+      "model": "modelo1",
+      "favorite": true
+    },
+    {
+      "id": 5,
+      "content": "Já tentou reiniciar o roteador?",
+      "author": "Pessoa da operadora",
+      "model": "modelo3",
+      "favorite": false
+    },
+    {
+      "content": "Da vida reclama, mas sem ela não vive!",
+      "author": "Mestre Yoda",
+      "model": "modelo1",
+      "favorite": true,
+      "id": 6
+    },
+    {
+      "content": "Na minha máquina funciona!",
       "author": "Dev",
-      "model": "modelo3"
+      "model": "modelo3",
+      "favorite": false,
+      "id": 7
+    },
+    {
+      "id": 9,
+      "content": "Esse é de laranja que parece de limão, mas tem gosto de tamarindo!",
+      "author": "Chaves",
+      "model": "modelo1",
+      "favorite": false
+    },
+    {
+      "id": 13,
+      "content": "Melhor professor, o fracasso é!",
+      "author": "Mestre Yoda",
+      "model": "modelo2",
+      "favorite": false
+    },
+    {
+      "content": "Você não é todo mundo!",
+      "author": "Mãe",
+      "model": "modelo2",
+      "favorite": false,
+      "id": 14
+    },
+    {
+      "content": "Foi sem querer querendo!",
+      "author": "Chaves",
+      "model": "modelo3",
+      "favorite": false,
+      "id": 15
+    },
+    {
+      "id": 16,
+      "content": "Em casa a gente conversa!",
+      "author": "Mãe",
+      "model": "modelo3",
+      "favorite": false
+    },
+    {
+      "id": 17,
+      "content": "Que a força esteja com você!",
+      "author": "Mestre Yoda",
+      "model": "modelo1",
+      "favorite": false
+    },
+    {
+      "content": "Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Diuretics paradis num copo é motivis de denguis. Atirei o pau no gatis, per gatis num morreus. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Sapien in monti palavris qui num significa nadis i pareci latim.",
+      "author": "Mussum",
+      "model": "modelo3",
+      "favorite": false,
+      "id": 18
+    },
+    {
+      "content": "Por que a pessoa dev não morre afogada? Porque ela usa ponto flutuante.",
+      "author": "Grupo da família",
+      "model": "modelo1",
+      "favorite": false,
+      "id": 19
+    },
+    {
+      "id": 20,
+      "content": "Leva o casaco que vai esfriar!",
+      "author": "Mãe",
+      "model": "modelo2",
+      "favorite": false
+    },
+    {
+      "content": "Resolver o bug não consegue? Esfriar a cabeça vc deve.",
+      "author": "Mestre Yoda",
+      "model": "modelo1",
+      "favorite": false,
+      "id": 21
+    },
+    {
+      "id": 22,
+      "content": "Não faça drama, faça café! :)",
+      "author": "Dev",
+      "model": "modelo2",
+      "favorite": false
+    },
+    {
+      "content": "Conserta minha impressora?",
+      "author": "Grupo da família",
+      "model": "modelo3",
+      "favorite": false,
+      "id": 23
+    },
+    {
+      "content": "Não fez mais que a sua obrigação!",
+      "author": "Mãe",
+      "model": "modelo1",
+      "favorite": false,
+      "id": 24
+    },
+    {
+      "content": "Por que meu código funcionou?",
+      "author": "Dev ",
+      "model": "modelo1",
+      "favorite": false,
+      "id": 25
+    },
+    {
+      "content": "A vingança nunca é plenis... mata a alma e a envenenis...",
+      "author": "Seu Madruguis",
+      "model": "modelo2",
+      "favorite": false,
+      "id": 26
+    },
+    {
+      "content": "Se eu for aí e achar, eu esfrego na sua cara!",
+      "author": "Mãe",
+      "model": "modelo3",
+      "favorite": false,
+      "id": 27
+    },
+    {
+      "content": "Sou poliglota; falo português, inglês e JavaScript!",
+      "author": "Dev",
+      "model": "modelo1",
+      "favorite": false,
+      "id": 28
     }
   ]
 }

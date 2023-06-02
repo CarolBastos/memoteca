@@ -8,6 +8,12 @@
     <b>{{ thought.author }}</b>
   </p>
   <div class="acoes">
+    <button class="botao-favorito" (click)="updateFavorite()">
+      <img
+        src="/assets/images/icone-favorito-{{ changeIconFavorite() }}.png"
+        alt="Icone favorito {{ changeIconFavorite() }}"
+      />
+    </button>
     <button
       class="botao-editar"
       routerLink="/pensamentos/editarPensamento/{{ thought.id }}"

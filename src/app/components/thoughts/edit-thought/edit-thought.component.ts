@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Thought } from '../IThought';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ThoughtService } from '../thought.service';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-thought',
@@ -9,34 +10,51 @@ import { ThoughtService } from '../thought.service';
   styleUrls: ['./edit-thought.component.scss'],
 })
 export class EditThoughtComponent {
-  thoughts: Thought = {
-    content: '',
-    author: '',
-    model: 'modelo1',
-  };
+  form!: FormGroup;
 
   constructor(
     private service: ThoughtService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private formBuilder: FormBuilder
   ) {}
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
+
     this.service.searchId(parseInt(id!)).subscribe((thought) => {
-      this.thoughts = thought;
+      this.form = this.formBuilder.group({
+        id: [thought.id],
+        content: [
+          thought.content,
+          Validators.compose([
+            Validators.required,
+            Validators.pattern(/(.|\s)*\S(.|\s)*/),
+          ]),
+        ],
+        author: [
+          thought.author,
+          Validators.compose([Validators.required, Validators.minLength(3)]),
+        ],
+        model: [thought.model],
+        favorite: [thought.favorite],
+      });
     });
   }
 
   editThought() {
-    if (this.thoughts.id) {
-      this.service.editThought(this.thoughts).subscribe(() => {
-        this.router.navigate(['/listarPensamento']);
-      });
-    }
+    this.service.editThought(this.form.value).subscribe(() => {
+      this.router.navigate(['/listarPensamento']);
+    });
   }
 
   cancel() {
     this.router.navigate(['/listarPensamento']);
+  }
+
+  enableButton(): string {
+    if (this.form.valid) {
+      return 'botao';
+    } else return 'botao__desabilitado';
   }
 }
